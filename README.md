@@ -2,19 +2,22 @@
 
 These are my answers to the Advent of code 2021 challenge.
 
-## [Day 1](https://adventofcode.com/2021/day/1):
+## [Day 1](https://adventofcode.com/2021/day/1) ⭐️⭐️
 
-Part 1: ⭐️, [Solution](/day1/part1.py); Part 2: ⭐️, [Solution](/day1/part2.py)
+[Part 1](/day1/part1.py)
+[Part 2](/day1/part2.py)
 
 ## [Day 2](https://adventofcode.com/2021/day/2):
 
-Part 1: Ongoing; Part 2: Ongoing
+Part 1 (Loading Answer....)
+Part 2 (Loading Answer....)
 
 ## [Day 3](https://adventofcode.com/2021/day/3):
 
-Part 1: Ongoing; Part 2: Ongoing
+Part 1 (Loading Answer....)
+Part 2 (Loading Answer....)
 
-## Day 4:
+## Day 4 :
 
 TBA
 
