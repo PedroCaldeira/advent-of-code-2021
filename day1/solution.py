@@ -1,4 +1,5 @@
 
+
 def solution(depths, window_size):
     result = 0
     for i in range(window_size, len(depths)):
@@ -10,22 +11,26 @@ def solution(depths, window_size):
 
 
 def main():
+
+    #  get input files
     with open('./day1.example.txt') as example_f:
         example_input = [int(n) for n in example_f.read().splitlines()]
     with open('./day1.txt') as f:
         chall_input = [int(n) for n in f.read().splitlines()]
 
-    # Verify Examples
-    p1_example_solution = solution(example_input, 1)
-    p2_example_solution = solution(example_input, 3)
-    assert(p1_example_solution == 7)
-    assert(p2_example_solution == 5)
+    #  run examples
+    p1_example_out = solution(example_input, 1)
+    p2_example_out = solution(example_input, 3)
+    #  assert examples correctness
+    assert(p1_example_out == 7)
+    assert(p2_example_out == 5)
 
-    p1_chall_solution = solution(chall_input, 1)
-    p2_chall_solution = solution(chall_input, 3)
+    #  get values
+    p1_chall_out = solution(chall_input, 1)
+    p2_chall_out = solution(chall_input, 3)
 
-    print("Part 1 Solution: ", p1_chall_solution)
-    print("Part 2 Solution: ", p2_chall_solution)
+    print("Part 1 output: ", p1_chall_out)
+    print("Part 2 output: ", p2_chall_out)
 
 
 if __name__ == "__main__":
