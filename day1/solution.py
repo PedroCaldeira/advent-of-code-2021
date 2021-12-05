@@ -1,37 +1,26 @@
+def solution(depths, windowSize, aggrFunc):
+    #  keep count of increments
+    increments = 0
 
+    #  iterate from start of second window so we can compare with previous
+    for start in range(1, len(depths) - windowSize + 1):
+        #  calculate end of window
+        end = start + windowSize
 
-def solution(depths, window_size):
-    result = 0
-    for i in range(window_size, len(depths)):
-        previous = sum(depths[i - window_size:i])
-        current = sum(depths[i + 1 - window_size:i + 1])
+        #  apply aggregating function to prev and current window
+        previous = aggrFunc(depths[start-1:end-1])
+        current = aggrFunc(depths[start:end])
+
+        #  increment increments if there's an increment AHAH
         if current > previous:
-            result += 1
-    return result
+            increments += 1
+
+    return increments
 
 
-def main():
-
-    #  get input files
-    with open('./day1.example.txt') as example_f:
-        example_input = [int(n) for n in example_f.read().splitlines()]
-    with open('./day1.txt') as f:
-        chall_input = [int(n) for n in f.read().splitlines()]
-
-    #  run examples
-    p1_example_out = solution(example_input, 1)
-    p2_example_out = solution(example_input, 3)
-    #  assert examples correctness
-    assert(p1_example_out == 7)
-    assert(p2_example_out == 5)
-
-    #  get values
-    p1_chall_out = solution(chall_input, 1)
-    p2_chall_out = solution(chall_input, 3)
-
-    print("Part 1 output: ", p1_chall_out)
-    print("Part 2 output: ", p2_chall_out)
+def solutionP1(depths):
+    return solution(depths, 1, sum)
 
 
-if __name__ == "__main__":
-    main()
+def solutionP2(depths):
+    return solution(depths, 3, sum)
